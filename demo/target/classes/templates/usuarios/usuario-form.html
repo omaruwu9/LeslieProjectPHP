@@ -1,0 +1,41 @@
+<!-- src/main/resources/templates/usuarios/usuario-form.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout.html">
+<head>
+    <title>Formulario de Usuario</title>
+</head>
+<body>
+<h1 th:text="${usuario.idUsuario} == null ? 'Agregar Usuario' : 'Editar Usuario'"></h1>
+<form action="#" th:action="@{/usuarios}" method="post">
+    <input type="hidden" th:name="idUsuario" th:value="${usuario.idUsuario}"/>
+    <div>
+        <label>Nombre:</label>
+        <input type="text" th:name="nombre" th:value="${usuario.nombre}" required>
+    </div>
+    <div>
+        <label>Apellido:</label>
+        <input type="text" th:name="apellido" th:value="${usuario.apellido}" required>
+    </div>
+    <div>
+        <label>No. Nómina:</label>
+        <input type="text" th:name="nomina" th:value="${usuario.nomina}" required>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" th:name="email" th:value="${usuario.email}" required>
+    </div>
+    <div>
+        <label>Contraseña:</label>
+        <input type="password" th:name="password" required>
+    </div>
+    <div>
+        <label>Rol:</label>
+        <select th:name="idRol" required>
+            <option value="1" th:selected="${usuario.idRol == 1}">Administrador</option>
+            <option value="2" th:selected="${usuario.idRol == 2}">Usuario</option>
+        </select>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>

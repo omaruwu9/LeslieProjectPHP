@@ -1,0 +1,126 @@
+/* src/main/resources/static/css/style-views.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #ff5722;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+}
+
+
+.moduls-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+
+.hero {
+    background-image: url('https://brooksgroup.com/wp-content/uploads/2023/12/AdobeStock_585591539-scaled.jpeg');
+    background-size: cover; /* aJUSTAR la imagen de fondo  */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+
+<!-- ABOUT US -->
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+.divider {
+    border-top: 2px solid #ddd; /* Línea de separación */
+    margin: 2rem 0; /* Espaciado vertical */
+}
+
+/* Efecto de hover */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-20px); /* Elevar ligeramente el elemento */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+<!--background-color: rgba(0, 0, 0, 0.22);-->
+}
+
+/* Cambiar color de texto al pasar el cursor */
+.hover-effect:hover h3,
+.hover-effect:hover h5 {
+    color: #007bff; /* Azul interactivo */
+}
+
+.divider {
+    display: flex; /* Utiliza la propiedad flexbox */
+    align-items: center; /* Centra verticalmente si hay más contenido */
+    text-align: center;
+    color: gold; /* Cambia el color de la estrella */
+    font-size: 24px; /* Tamaño de la estrella */
+    font-weight: bold;
+}
+
+.divider::before,
+.divider::after {
+    content: ""; /* Línea antes y después */
+    flex: 1; /* Permite que las líneas se extiendan */
+    border-bottom: 2px solid #ccc; /* Estilo de la línea */
+    margin: 0 10px; /* Espaciado alrededor de la estrella */
+}
+
+/* ESTILOS DE LOS MODULOS */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    margin
+}
+
+.module {
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.module img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}

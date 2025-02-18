@@ -1,0 +1,18 @@
+<!-- src/main/resources/templates/login.html -->
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" th:replace="layout.html">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style-principals.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/promex-logo-removebg-preview.png}"/>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+<h1>Iniciar Sesión</h1>
+<form th:action="@{/login}" method="post">
+    <input type="text" name="nomina" placeholder="No. Nómina" required>
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <button type="submit">Iniciar Sesión</button>
+</form>
+<p th:if="${error}" th:text="${error}"></p>
+</body>
+</html>
